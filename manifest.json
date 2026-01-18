@@ -26,7 +26,10 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "tugraz-otp@example.com"
+      "id": "tugraz-otp@example.com",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   }
 }
