@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const timerSpan = document.getElementById('timer');
 
   // Load saved settings
-  const storage = (typeof browser !== 'undefined' ? browser : chrome).storage.sync;
+  const storage = (typeof browser !== 'undefined' ? browser : chrome).storage.local;
   const result = await storage.get(['totpSecret', 'autoSubmit']);
   if (result.totpSecret) {
     secretInput.value = result.totpSecret;

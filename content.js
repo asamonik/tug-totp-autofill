@@ -105,7 +105,7 @@
     lastAttempt = now;
 
     // Get the secret from storage
-    const result = await (typeof browser !== 'undefined' ? browser : chrome).storage.sync.get(['totpSecret', 'autoSubmit']);
+    const result = await (typeof browser !== 'undefined' ? browser : chrome).storage.local.get(['totpSecret', 'autoSubmit']);
     const secret = result.totpSecret;
     const autoSubmit = result.autoSubmit !== false; // Default to true
 
